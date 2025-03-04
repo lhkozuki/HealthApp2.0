@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HEALTH APP</title>
+    <link rel="stylesheet" href="style-com-javascript.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <button
+          class="btn-menu"
+          aria-label="Abrir Menu"
+          aria-haspopup="true"
+          aria-controls="menu"
+          aria-expanded="false"
+        >
+        <span class="hamburger"></span>
+        </button>
+        <ul class="menu" id="menu" role="menu">
+          <li><a href="/">Home</a></li>
+          <li><a href="create.html">Criar +</a></li>
+          <li><a href="/">Lembretes</a></li>
+          <li><a href="/">Usuário</a></li>
+        </ul>
+      </nav>
+      <a href="index.html" class="logo">Health App</a>
+      <a href="login.html"><img class="" src="/img/perfil.png" alt="" width="25px" height="25px"></a>
+    </header>
+    <div class="header_search">
+      <img src="/img/search0.png" alt="">
+      <input id="search-input" type="text" maxlength="800" autocorrect="off" autocapitalize="off" apellcheck="false" placeholder="Pesquisar" />
+  </div>
+
+
+
+
+
+  <div class="contentlist">
+    <form method="POST" action="/create" th:object="${reminder}">
+        <input type="hidden" th:value="${reminder.id}" name="id" />
+        <div class="mb-3">
+          <label class="form-label">Nome do medicamento: Cefalexina</label>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Horário do lembrete: 07h00</label>
+        </div>
+        <div class="mb-3">
+          <label class="form-label"><a href="#">Acessar bula</a></label>
+        </div>
+    </form>
+</div>
+
+<div class="contentlist">
+  <form method="POST" action="/create" th:object="${reminder}">
+      <input type="hidden" th:value="${reminder.id}" name="id" />
+      <div class="mb-3">
+        <label class="form-label">Nome do medicamento: Oxicodona</label>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Horário do lembrete: 21h00</label>
+      </div>
+      <div class="mb-3">
+        <label class="form-label"><a href="#">Acessar bula</a></label>
+      </div>
+  </form>
+</div>
+
+<div class="contentlist">
+  <form method="POST" action="/create" th:object="${reminder}">
+      <input type="hidden" th:value="${reminder.id}" name="id" />
+      <div class="mb-3">
+        <label class="form-label">Nome do medicamento: Amoxicilina</label>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Horário do lembrete: 09h00</label>
+      </div>
+      <div class="mb-3">
+        <label class="form-label"><a href="#">Acessar bula</a></label>
+      </div>
+  </form>
+</div>
+
+<div class="contentlist">
+  <form method="POST" action="/create" th:object="${reminder}">
+      <input type="hidden" th:value="${reminder.id}" name="id" />
+      <div class="mb-3">
+        <label class="form-label">Nome do medicamento: Azitromicina</label>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Horário do lembrete: 14h00</label>
+      </div>
+      <div class="mb-3">
+        <label class="form-label"><a href="#">Acessar bula</a></label>
+      </div>
+  </form>
+</div>
+
+<div class="contentlist">
+  <form method="POST" action="/create" th:object="${reminder}">
+      <input type="hidden" th:value="${reminder.id}" name="id" />
+      <div class="mb-3">
+        <label class="form-label">Nome do medicamento: Escitalopram</label>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Horário do lembrete: 12h00</label>
+      </div>
+      <div class="mb-3">
+        <label class="form-label"><a href="#">Acessar bula</a></label>
+      </div>
+  </form>
+</div>
+
+<div class="contentlist">
+  <form method="POST" action="/create" th:object="${reminder}">
+      <input type="hidden" th:value="${reminder.id}" name="id" />
+      <div class="mb-3">
+        <label class="form-label">Nome do medicamento: Alprazolam</label>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Horário do lembrete: 18h00</label>
+      </div>
+      <div class="mb-3">
+        <label class="form-label"><a href="#">Acessar bula</a></label>
+      </div>
+  </form>
+</div>
+
+<div class="contentlist">
+  <form method="POST" action="/create" th:object="${reminder}">
+      <input type="hidden" th:value="${reminder.id}" name="id" />
+      <div class="mb-3">
+        <label class="form-label">Nome do medicamento: Bromoprida</label>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Horário do lembrete: 10h30</label>
+      </div>
+      <div class="mb-3">
+        <label class="form-label"><a href="#">Acessar bula</a></label>
+      </div>
+  </form>
+</div>
+
+
+
+
+
+
+
+
+  <footer>
+    <div class="menu-rodape">
+      <a href="index.html"><img class="" src="/img/home.png" alt="" width="27px" height="27px"></a>
+      <a href="create.html"><img class="" src="/img/mais.png" alt="" width="27px" height="27px"></a>
+      <a href="lembrete.html"><img class="" src="/img/historico.png" alt="" width="27px" height="27px"></a>
+    </div>
+  </footer>
+  </body>
+</html>
