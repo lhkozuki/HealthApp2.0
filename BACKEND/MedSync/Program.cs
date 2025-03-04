@@ -8,6 +8,25 @@ var builder = WebApplication.CreateBuilder(args);
 // Configurar as URLs (http://localhost:5153)
 builder.WebHost.UseUrls("http://localhost:5153");
 
+// Carrega os User Secrets apenas em ambiente de desenvolvimento
+if (builder.Environment.IsDevelopment())
+{
+    builder.Configuration.AddUserSecrets<Program>();
+}
+
+// Obtém a string de conexão e substitui o placeholder {DB_PASSWORD}
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+var dbPassword = builder.Configuration["DB_PASSWORD"];
+if (!string.IsNullOrEmpty(dbPassword))
+{
+    connectionString = connectionString.Replace("{DB_PASSWORD}", dbPassword);
+    Console.WriteLine($"String de conexão: {connectionString}"); // Log temporário
+}
+else
+{
+    throw new InvalidOperationException("A variável 'DB_PASSWORD' não está definida nos User Secrets.");
+}
+
 // Adiciona serviços ao contêiner
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
@@ -15,7 +34,7 @@ builder.Services.AddSwaggerGen();
 
 // Configuração de conexão com o banco de dados
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseSqlServer(connectionString));
 
 // Configuração de CORS 
 builder.Services.AddCors(options =>

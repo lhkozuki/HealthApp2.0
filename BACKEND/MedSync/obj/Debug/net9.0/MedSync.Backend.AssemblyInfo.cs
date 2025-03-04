@@ -10,10 +10,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("82276496-c2d7-42ca-bdd9-c259d9c1d07d")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("MedSync.Backend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+57f4587b32fdb1e330c2276028f1f47316b852e9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5114eee4ef5d51b3e7069cdb3dc7f57746ea1dcb")]
 [assembly: System.Reflection.AssemblyProductAttribute("MedSync.Backend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MedSync.Backend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
