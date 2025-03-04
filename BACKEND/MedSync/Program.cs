@@ -20,7 +20,6 @@ var dbPassword = builder.Configuration["DB_PASSWORD"];
 if (!string.IsNullOrEmpty(dbPassword))
 {
     connectionString = connectionString.Replace("{DB_PASSWORD}", dbPassword);
-    Console.WriteLine($"String de conexão: {connectionString}"); // Log temporário
 }
 else
 {
