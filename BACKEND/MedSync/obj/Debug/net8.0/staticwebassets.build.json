@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "mhOphVJ6j5WO7wyO5JVM5TBqH1MOfRpE1yS7IukmDpY=",
+  "Source": "MedSync.Backend",
+  "BasePath": "_content/MedSync.Backend",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
