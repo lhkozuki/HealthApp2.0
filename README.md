@@ -15,6 +15,8 @@ O *HealthApp* é um sistema desenvolvido para ajudar usuários a lembrarem de to
 - *Backend:* C# (.NET 8)
 - *Frontend:* HTML, CSS, JavaScript
 - *Banco de Dados:* SQL Server hospedado no Azure
+   - Diagrama Relacional do Banco de Dados: https://www.mermaidchart.com/raw/bdfa32c6-115e-4499-83aa-3eb1386b67b8?theme=light&version=v0.1&format=svg
+   - Script SQL para criação das tabelas e exemplos de operações CRUD: https://github.com/amanda-barbosa-dev/HealthApp2.0/issues/8#issuecomment-2706727445
 
 ## Como Funciona
 1. *Cadastro de Usuário:* O usuário cria uma conta no sistema.
@@ -29,28 +31,28 @@ O *HealthApp* é um sistema desenvolvido para ajudar usuários a lembrarem de to
 ## Instalação e Configuração
 Recomendamos a utilização da IDE Vs Code para a execução do projeto ser leve, flexível, funcionando em Windows, macOS e Linux, e equipado com recursos modernos via extensões. Além de trabalhar perfeitamente com o .NET Command Line Interface (CLI), permitindo criar, compilar e executar projetos C# diretamente pelo terminal integrado. Por exemplo, comandos como `dotnet new`, `dotnet build` e `dotnet run` são fáceis de usar sem sair do ambiente.
 - ### Clone o repositório
-  ```
+  ```bash
   git clone https:https://github.com/amanda-barbosa-dev/HeathApp2.0
   ```
 - ### Backend
     - #### Acesse a pasta do projeto e instale as dependências
-      ```
+      ```bash
       cd BACKEND\MedSync
       dotnet restore
       ```
     - #### Configure a senha para conexão com o banco de dados utilizada no appsettings.json
-      ```
+      ```bash
       dotnet user-secrets init --project MedSync.Backend.csproj
       dotnet user-secrets set "DB_PASSWORD" "SuaSenha123!" --project MedSync.Backend.csproj
       ```
       Obs.: Importante substituir o "SuaSenha123!" pela senha válida. 
 
     - #### Execute as migrações do banco de dados
-      ```
+      ```bash
       dotnet ef database update
       ```
     - #### Inicie a API
-      ```
+      ```bash
       dotnet run
       ```
 
@@ -75,16 +77,16 @@ Recomendamos a utilização da IDE Vs Code para a execução do projeto ser leve
  - Contribuições são bem-vindas! Para contribuir:
      - #### Faça um fork do projeto
      - ##### Crie uma branch para sua funcionalidade
-       ```
+       ```bash
        git checkout -b minha-feature
        ```
      - ##### Faça commit das suas alterações
-       ```
+       ```bash
        git commit -m 'Adiciona nova funcionalidade'
        ```
 
      - ##### Envie para o repositório
-       ```
+       ```bash
        git push origin minha-feature
        ```
      - ##### Abra um Pull Request
