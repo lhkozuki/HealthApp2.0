@@ -18,8 +18,8 @@ O *HealthApp* é um sistema desenvolvido para ajudar usuários a lembrarem de to
   > 
   > * **Diagrama de classes:** 
 - *Frontend:* HTML, CSS, JavaScript
+  > * **Telas no Figma:** 
 - *Banco de Dados:* SQL Server hospedado no Azure
-
   > * **Diagrama Relacional do Banco de Dados:** https://www.mermaidchart.com/raw/bdfa32c6-115e-4499-83aa-3eb1386b67b8?theme=light&version=v0.1&format=svg
   > 
   > * **Script SQL para criação das tabelas e exemplos de operações CRUD:** https://github.com/amanda-barbosa-dev/HealthApp2.0/issues/8#issuecomment-2706727445
@@ -33,9 +33,10 @@ O *HealthApp* é um sistema desenvolvido para ajudar usuários a lembrarem de to
    - Tempo de tratamento (exemplo: 10 dias)
 3. *Geração de Alarmes:* Com base nos dados fornecidos, o sistema gera automaticamente os horários dos alarmes.
 4. *Notificações:* O sistema notifica o usuário nos horários corretos para garantir que ele tome sua medicação no tempo certo.
-  > * **Landing Page do Projeto (Github Pages):** 
-  > 
-  > * **Vídeo de apresentação do Projeto:**
+   
+    > * **Landing Page do Projeto (Github Pages):** 
+    > 
+    > * **Vídeo de apresentação do Projeto:**
 
 ## Instalação e Configuração
 Recomendamos a utilização da IDE ![Vscode](https://img.shields.io/badge/Vscode-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white) para a execução do projeto ser leve, flexível, funcionando em Windows, macOS e Linux, e equipado com recursos modernos via extensões. Além de trabalhar perfeitamente com o .NET Command Line Interface (CLI), permitindo criar, compilar e executar projetos C# diretamente pelo terminal integrado. Por exemplo, comandos como `dotnet new`, `dotnet build` e `dotnet run` são fáceis de usar sem sair do ambiente.
