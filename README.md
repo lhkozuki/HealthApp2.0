@@ -35,6 +35,7 @@ Recomendamos a utilização da IDE Vs Code para a execução do projeto ser leve
 - ### Backend
     - #### Acesse a pasta do projeto e instale as dependências
       ```
+      cd BACKEND\MedSync
       dotnet restore
       ```
     - #### Configure a senha para conexão com o banco de dados utilizada no appsettings.json
@@ -64,6 +65,7 @@ Recomendamos a utilização da IDE Vs Code para a execução do projeto ser leve
        - Quando o **Live Server** aparecer nos resultados, clique no botão verde **"Install"** (Instalar) ao lado do nome da extensão.
        - Aguarde alguns segundos até que a instalação esteja concluída. O botão mudará para **"Installed"** ou exibirá opções como "Disable" e "Uninstall".
     - #### Inicie a aplicação
+      - Abra no VS Code a pasta HealthApp, localizada dento da pasta Frontend no repositório clonado. 
       - Abrir um arquivo HTML no VS Code.
       - Clicar com o botão direito no arquivo e selecionar **"Open with Live Server"** no menu de contexto. Ou, na barra inferior do VS Code, clicar em **"Go Live"** (se 
        disponível após a instalação).
