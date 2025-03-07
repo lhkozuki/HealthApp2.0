@@ -1,1 +1,114 @@
-# HeathApp2.0
+# HealthApp2.0  - Sistema de Alarmes para Medicação
+
+## Descrição
+O *HealthApp* é um sistema desenvolvido para ajudar usuários a lembrarem de tomar seus medicamentos no horário correto. A aplicação permite o cadastro de usuários, a associação de medicamentos com informações detalhadas e a geração automática de alarmes baseados na periodicidade e duração do tratamento.
+
+## Funcionalidades
+- Cadastro de usuários
+- Registro de medicamentos para cada usuário
+- Definição de periodicidade, dose e tempo de tratamento
+- Acesso a bula do medicamento ***
+- Geração automática de alarmes com base nas informações fornecidas ***
+- Notificações para lembrar os usuários sobre os horários dos medicamentos ***
+
+## Tecnologias Utilizadas
+- *Backend:* C# (.NET 8)
+- *Frontend:* HTML, CSS, JavaScript
+- *Banco de Dados:* SQL Server hospedado no Azure
+
+## Como Funciona
+1. *Cadastro de Usuário:* O usuário cria uma conta no sistema.
+2. *Adição de Medicamentos:* O usuário adiciona seus medicamentos informando:
+   - Nome do medicamento
+   - Dosagem
+   - Periodicidade (exemplo: a cada 8 horas)
+   - Tempo de tratamento (exemplo: 10 dias)
+3. *Geração de Alarmes:* Com base nos dados fornecidos, o sistema gera automaticamente os horários dos alarmes.
+4. *Notificações:* O sistema notifica o usuário nos horários corretos para garantir que ele tome sua medicação no tempo certo.
+
+## Instalação e Configuração
+Recomendamos a utilização da IDE Vs Code para a execução do projeto ser leve, flexível, funcionando em Windows, macOS e Linux, e equipado com recursos modernos via extensões. Além de trabalhar perfeitamente com o .NET Command Line Interface (CLI), permitindo criar, compilar e executar projetos C# diretamente pelo terminal integrado. Por exemplo, comandos como `dotnet new`, `dotnet build` e `dotnet run` são fáceis de usar sem sair do ambiente.
+- ### Clone o repositório
+  ```
+  git clone https:https://github.com/amanda-barbosa-dev/HeathApp2.0
+  ```
+- ### Backend
+    - #### Acesse a pasta do projeto e instale as dependências
+      ```
+      dotnet restore
+      ```
+    - #### Configure a senha para conexão com o banco de dados utilizada no appsettings.json
+      ```
+      dotnet user-secrets init --project MedSync.Backend.csproj
+      dotnet user-secrets set "DB_PASSWORD" "SuaSenha123!" --project MedSync.Backend.csproj
+      ```
+      Obs.: Importante substituir o "SuaSenha123!" pela senha válida. 
+
+    - #### Execute as migrações do banco de dados
+      ```
+      dotnet ef database update
+      ```
+    - #### Inicie a API
+      ```
+      dotnet run
+      ```
+
+- ### Frontend
+    - #### Instale a extenção Live Server no Vs Code:
+       O **Live Server** é uma extensão popular no VS Code que permite visualizar páginas HTML em tempo real no navegador, atualizando automaticamente ao salvar alterações no 
+       código. Abaixo está o passo a passo para instalá-la:
+       - Abra o Visual Studio Code
+       - Acesse a Marketplace de Extensões usando o atalho `Ctrl+Shift+X` (Windows/Linux) ou `Cmd+Shift+X` (macOS).
+       - Na barra de pesquisa no topo da janela de extensões, digite **"Live Server"**. A extensão oficial é desenvolvida por **Ritwick Dey**. Verifique o nome do autor para 
+         garantir que está instalando a versão correta.
+       - Quando o **Live Server** aparecer nos resultados, clique no botão verde **"Install"** (Instalar) ao lado do nome da extensão.
+       - Aguarde alguns segundos até que a instalação esteja concluída. O botão mudará para **"Installed"** ou exibirá opções como "Disable" e "Uninstall".
+    - #### Inicie a aplicação
+      - Abrir um arquivo HTML no VS Code.
+      - Clicar com o botão direito no arquivo e selecionar **"Open with Live Server"** no menu de contexto. Ou, na barra inferior do VS Code, clicar em **"Go Live"** (se 
+       disponível após a instalação).
+      - O navegador padrão será aberto automaticamente com o endereço `http://localhost:5500` (ou outra porta, se configurada), exibindo sua página.
+
+## Contribuição 
+ - Contribuições são bem-vindas! Para contribuir:
+     - #### Faça um fork do projeto
+     - ##### Crie uma branch para sua funcionalidade
+       ```
+       git checkout -b minha-feature
+       ```
+     - ##### Faça commit das suas alterações
+       ```
+       git commit -m 'Adiciona nova funcionalidade'
+       ```
+
+     - ##### Envie para o repositório
+       ```
+       git push origin minha-feature
+       ```
+     - ##### Abra um Pull Request
+
+
+## Licença
+Este projeto está licenciado sob a licença MIT. Consulte o arquivo LICENSE para mais detalhes.
+
+## Contato
+Para dúvidas ou sugestões, entre em contato:
+- *GitHub:* [HealthApp](https://github.com/amanda-barbosa-dev/HealthApp2.0/issues)
+
+## Melhorias 
+- Implementar o acesso ao link para consulta da bula. ***
+- Implementar envio de mensagem via WhatsApp ***
+- Implementar funcionalidade de recusividade no envio dos lembretes via de push notification com data de início, fim, e de acordo com o horário
+recomendado para uso do medicamento, por exemplo 8h/8h. ***
+- Implementar check-box para confirmar no aplicativo que o medicamento foi injerido para auxiliar no controle. 
+
+
+## Autores
+- Amanda Bonholi Barbosa
+- Anderson Salaori
+- Cauê Cabral Rocha
+- Cristiano Batista da Costa
+- Igor Gomes da Costa Junior
+- Leonardo de Oliveira Domingos
+- Lucas Hikaru Kozuki
+- Luiz Henrique Nunes Gonçalves
