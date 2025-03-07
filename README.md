@@ -69,7 +69,7 @@ Recomendamos a utilização da IDE ![Vscode](https://img.shields.io/badge/Vscode
     - #### Instale a extenção Live Server no Vs Code:
        O **Live Server** é uma extensão popular no VS Code que permite visualizar páginas HTML em tempo real no navegador, atualizando automaticamente ao salvar alterações no 
        código. Abaixo está o passo a passo para instalá-la:
-       - Abra o Visual Studio Code
+       - Abra o Vs Code
        - Acesse a Marketplace de Extensões usando o atalho `Ctrl+Shift+X` (Windows/Linux) ou `Cmd+Shift+X` (macOS).
        - Na barra de pesquisa no topo da janela de extensões, digite **"Live Server"**. A extensão oficial é desenvolvida por **Ritwick Dey**. Verifique o nome do autor para 
          garantir que está instalando a versão correta.
