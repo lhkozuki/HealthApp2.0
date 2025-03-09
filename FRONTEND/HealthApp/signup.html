@@ -23,7 +23,7 @@
         </button>
         <ul class="menu" id="menu" role="menu">
           <li><a href="/">Home</a></li>
-          <li><a href="create.html">Criar +</a></li>
+          <li><a href="/">Criar +</a></li>
           <li><a href="/">Lembretes</a></li>
           <li><a href="/">Usuário</a></li>
         </ul>
@@ -31,16 +31,31 @@
       <a href="index.html" class="logo">Health App</a>
       <a href="login.html"><img class="" src="/img/perfil.png" alt="" width="25px" height="25px"></a>
     </header>
-    <div class="header_search">
-      <img src="/img/search0.png" alt="">
-      <input id="search-input" type="text" maxlength="800" autocorrect="off" autocapitalize="off" apellcheck="false" placeholder="Pesquisar" />
+    <div class="contentlg">
+        <form method="POST">
+            <h1>Cadastre-se</h1>
+            <div class="mb-3">
+                <label class="form-label">Nome: 
+                <input type="text" placeholder="Digite seu nome" class="form-control inputs required" required>
+                </label>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Email: 
+                <input type="text" placeholder="Digite seu email" class="form-control inputs required" required>
+                </label>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Senha: 
+                <input type="text" placeholder="Digite sua senha" class="form-control inputs required"  required>
+                </label>
+            </div>
+            <button type="submit" class="btn btn-primary">Cadastrar</button>
+            <p>Já tem uma conta? <a href="/login.html">Faça o Login</a></p>
+        </form>
     </div>
-    <div class="contentlist">
-      <h2>Seus Medicamentos</h2>
-    </div> 
-    <div id="medicationList">
-        <!-- Medicamentos serão inseridos aqui dinamicamente -->
-    </div>
+
+
   <footer>
     <div class="menu-rodape">
       <a href="index.html"><img class="" src="/img/home.png" alt="" width="27px" height="27px"></a>

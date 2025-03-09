@@ -32,31 +32,42 @@
       <a href="login.html"><img class="" src="/img/perfil.png" alt="" width="25px" height="25px"></a>
     </header>
     <div class="content">
-        <form method="POST" action="/create" th:object="${reminder}">
-            <input type="hidden" th:value="${reminder.id}" name="id" />
-            <div class="mb-3">
-            <label class="form-label">
-            <input type="text" placeholder="Nome do medicamento" class="form-control inputs required" name="medicationName" th:value="${reminder.medicationName}" required>
-            </label>
-            </div>
-            <div class="mb-3">
-            <label class="form-label">Data do lembrete: 
-            <input type="date" class="form-control" name="date" th:value="${{reminder.date}}" required>
-            </label>
-            </div>
-            <div class="mb-3">
-            <label class="form-label">Horário do lembrete: 
-            <input type="time" class="form-control" name="time" th:value="${{reminder.time}}" required>
-            </label>
-            </div>
-            <button type="submit" class="btn btn-primary">Adicionar</button>
-        </form>
-    </div>
-
-
-
-
-
+      <form id="createMedicationForm" method="POST">
+          <h1>Criar Lembrete</h1>
+          <input type="hidden" name="id" />
+          <div class="mb-3">
+              <label class="form-label">Nome do medicamento:
+                  <input type="text" placeholder="Ex. Dorflex" class="form-control" name="name" required>
+              </label>
+          </div>
+          <div class="mb-3">
+              <label class="form-label">Dose:
+                  <input type="text" placeholder="Ex. 1 comprimido, 5ml" class="form-control" name="dose" required>
+              </label>
+          </div>
+          <div class="mb-3">
+              <label class="form-label">Frequência (h):
+                  <input type="number" placeholder="Ex. 4" class="form-control" name="frequencyHours" required>
+              </label>
+          </div>
+          <div class="mb-3">
+              <label class="form-label">Data de início:
+                  <input type="date" class="form-control" name="startDate" required>
+              </label>
+          </div>
+          <div class="mb-3">
+              <label class="form-label">Horário de início:
+                  <input type="time" class="form-control" name="startTime" required>
+              </label>
+          </div>
+          <div class="mb-3">
+              <label class="form-label">Duração do tratamento (dias):
+                  <input type="number" placeholder="Ex. 3" class="form-control" name="treatmentDurationDays" required>
+              </label>
+          </div>
+          <button type="submit" class="btn btn-primary">Adicionar</button>
+      </form>
+  </div>
 
   <footer>
     <div class="menu-rodape">

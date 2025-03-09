@@ -32,28 +32,23 @@
       <a href="login.html"><img class="" src="/img/perfil.png" alt="" width="25px" height="25px"></a>
     </header>
     <div class="contentlg">
-        <form method="POST" action="/create" th:object="${reminder}">
-            <input type="hidden" th:value="${reminder.id}" name="id" />
+        <form method="POST">
             <h1>Login</h1>
             <div class="mb-3">
-                <label class="form-label">Login: 
-                <input type="text" placeholder="Digite seu login" class="form-control inputs required" name="medicationName" th:value="${reminder.medicationName}" required>
+                <label class="form-label">Email: 
+                <input type="text" placeholder="Digite email" class="form-control inputs required" required>
                 </label>
             </div>
 
             <div class="mb-3">
                 <label class="form-label">Senha: 
-                <input type="text" placeholder="Digite sua senha" class="form-control inputs required" name="medicationName" th:value="${reminder.medicationName}" required>
+                <input type="text" placeholder="Digite sua senha" class="form-control inputs required"  required>
                 </label>
             </div>
             <button type="submit" class="btn btn-primary">Entrar</button>
-            <p>Ainda não tem uma conta? <a href="#">Cadastre-se</a></p>
+            <p>Ainda não tem uma conta? <a href="/signup.html">Cadastre-se</a></p>
         </form>
     </div>
-
-
-
-
 
 
   <footer>
