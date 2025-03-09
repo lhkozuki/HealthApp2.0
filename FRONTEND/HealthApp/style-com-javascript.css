@@ -248,6 +248,20 @@ h1 {
 }
 
 
+.edit-link, .delete-link, .acessar-bula-link {
+  margin-right: 15px;
+  text-decoration: none; 
+  color: var(--white);
+}
+.edit-link:hover {
+  color: #4CAF50; 
+}
+.delete-link:hover {
+  color: #f44336; 
+}
+.acessar-bula-link:hover {
+  color: var(----white)
+}
 
 
 
