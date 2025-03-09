@@ -113,10 +113,10 @@ const renderMedications = (medications) => {
                     <label class="form-label">Frequência (h): ${med.frequencyHours}</label>
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">Data de Início: ${new Date(med.startDate).toLocaleDateString('pt-BR')}</label>
+                    <label class="form-label">Data de início: ${new Date(med.startDate).toLocaleDateString('pt-BR')}</label>
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">Primeiro horário: ${new Date(med.startDate).toLocaleTimeString('pt-BR')}</label>
+                    <label class="form-label">Horário de início: ${new Date(med.startDate).toLocaleTimeString('pt-BR')}</label>
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Duração em dias: ${med.treatmentDurationDays || 'N/A'}</label>
@@ -161,6 +161,22 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 });
+
+// Função para criar um novo medicamento
+const createMedication = async (medicationData) => {
+  try {
+      const response = await fetch(`${API_BASE_URL}/Medications`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(medicationData)
+      });
+      if (!response.ok) throw new Error(`Erro ${response.status}: ${response.statusText}`);
+      return await response.json();
+  } catch (error) {
+      console.error('Erro ao criar medicamento:', error.message);
+      throw error;
+  }
+};
 
 // Lógica para create.html
 const createForm = document.getElementById('createMedicationForm');
