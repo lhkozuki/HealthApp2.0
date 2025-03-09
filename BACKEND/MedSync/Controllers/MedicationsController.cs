@@ -76,33 +76,43 @@ namespace MedSync.Backend.Controllers
             return Ok(medicationDto);
         }
 
-        // GET: API/ Medications/ {nome} - Retorna um medicamento pelo nome (Falta conferir este!)
-        [HttpGet("{search}")]
-        public async Task<ActionResult<IEnumerable<MedicationDto>>> SearchMedications ([FromQuery] string name)
+        
+
+        // GET: api/Medications/{userId}/search?name={searchTerm}
+        [HttpGet("{userId}/search")]
+        public async Task<ActionResult<IEnumerable<MedicationDto>>> GetMedicationsByUserId(int userId, [FromQuery] string? name = null)
         {
-            // Busca medicamento pelo nome
-            if (string.IsNullOrEmpty(name)) 
+            // Busca medicamentos pelo userId, com filtro opcional por nome
+            var query = _context.Medications
+                .Where(m => m.UserId == userId);
+
+            if (!string.IsNullOrEmpty(name))
             {
-                return BadRequest ("O nome é obrigatório!");
+                query = query.Where(m => m.Name.Contains(name));
             }
 
-            var medications = await _context.Medications
-            .Where(m => EF.Functions.Like(m.Name, $"%{name}%"))
-            .ToListAsync();
+            var medications = await query
+                .Select(m => new MedicationDto
+                {
+                    Id = m.Id,
+                    Name = m.Name,
+                    Dose = m.Dose,
+                    FrequencyHours = m.FrequencyHours,
+                    StartDate = m.StartDate,
+                    TreatmentDurationDays = m.TreatmentDurationDays.HasValue ? m.TreatmentDurationDays.Value : 0, // Trata nullable
+                    UserId = m.UserId
+                })
+                .ToListAsync();
 
-            return medications.Count == 0 
-            ? NotFound ("Nenhum medicamento encontrado!")
-            : Ok(medications);
+            return Ok(medications);
         }
-
-        private bool Medication(int id)
-        {
-            return _context.Medications.Any(e => e.Id == id);
-        }
-            
+    
+    
+    
+ 
         // POST: API/ Cadastra um novo medicamento
         [HttpPost]
-        public async Task<ActionResult<Medication>> CreatMedication(MedicationDto medicationDto)
+        public async Task<ActionResult<Medication>> CreatMedication([FromBody]MedicationDto medicationDto)
         {
             // Verifica se o usuário existe
             var user = await _context.Users.FindAsync(medicationDto.UserId);
