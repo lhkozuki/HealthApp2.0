@@ -158,6 +158,15 @@ a {
 
 
 /*BODY*/
+
+body.protected {
+  display: none; /* Oculta o corpo por padrão em páginas protegidas */
+}
+
+body.protected.visible {
+  display: block; /* Exibe o corpo quando autenticado */
+}
+
 .inputs{
   padding: 8px 5px;
   outline: none;
@@ -191,20 +200,45 @@ button[type="submit"]:hover{
   background-color: #181818;
 }
 
+#createMedicationForm{
+  display: flex;
+  flex-direction: column;
+  margin-left: 5%;
+}
 
+#createMedicationForm.form-label{
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 5%;
+}
+
+#createMedicationForm.mb-3{
+  margin: 0;
+  padding: 0;
+  gap:0;
+}
+
+.form-control {
+  background-color: #f5f5f5;
+  border: solid 1px #3b3b3b;
+  border-radius: 5px;
+}
 
 .content{
   display: flex;
+  flex-direction: column;
   align-items: center;
   margin-left: 10%;
   width: 80%;
-  margin-top: 20%;
+  margin-top: 5%;
   background-color: #f5f5f5;
   border: solid 1px #3b3b3b;
   padding: 2rem;
   border-radius: 10px;
   min-width: 30%;
   overflow: auto;
+  gap: 2rem;
 }
 
 .content form{
@@ -213,6 +247,18 @@ button[type="submit"]:hover{
   gap: 1rem;
 }
 
+#userOptions, .userOptions{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.medicationListEmpty{
+  background-color: #f5f5f5;
+  border: solid 1px #3b3b3b;
+  padding: 1rem;
+  border-radius: 10px;
+}
 
 .contentlist {
   display: flex;
@@ -228,6 +274,25 @@ button[type="submit"]:hover{
   overflow: auto;
 }
 
+.contentPerfilList{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 2%;
+  width: 96%;
+  margin-top: 5%;
+  background-color: #f5f5f5;
+  border: solid 1px #3b3b3b;
+  padding: 2rem;
+  border-radius: 10px;
+  min-width: 30%;
+  overflow: auto;
+  gap: 2rem;
+
+}
+
+
+
 .contentlg {
   display: flex;
   align-items: center;
@@ -242,28 +307,70 @@ button[type="submit"]:hover{
   overflow: auto;
 }
 
+.contentIndex{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 10%;
+  width: 80%;
+  margin-top: 5%;
+  background-color: #f5f5f5;
+  border: solid 1px #3b3b3b;
+  padding: 2rem;
+  border-radius: 10px;
+  min-width: 30%;
+  overflow: auto;
+}
+
 h1 {
-  margin: 3px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h2 {
   text-align: center;
 }
 
+p {
+  margin-bottom: 10px;
+}
 
-.edit-link, .delete-link, .acessar-bula-link {
-  margin-right: 15px;
+
+#changePasswordLink, .contentPerfilList #userProfile #logoutLink{
+  margin: 10px;
+  text-decoration: none; 
+  color: var(--white);
+
+}
+
+.edit-link, .delete-link {
+  margin: 15px;
   text-decoration: none; 
   color: var(--white);
 }
+
+
+
+.first-link, #changeEmailLink {
+  margin-right: 5px;
+  text-decoration: none; 
+  color: var(--white);
+}
+
 .edit-link:hover {
   color: #4CAF50; 
 }
 .delete-link:hover {
   color: #f44336; 
 }
-.acessar-bula-link:hover {
+.bula-link:hover {
   color: var(----white)
 }
 
 
+#changeEmailForm, #changePasswordForm {
+  margin-top: 20px;
+}
 
 
 

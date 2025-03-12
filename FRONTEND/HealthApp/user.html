@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login - Health App</title>
+    <title>Perfil - Health App</title>
     <link rel="stylesheet" href="style-com-javascript.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <script defer src="app.js"></script>
@@ -27,22 +27,31 @@
         <a href="user.html"><img src="/img/perfil.png" alt="Perfil" width="25px" height="25px"></a>
     </header>
 
-    <div class="content">
-        <form id="loginForm" method="POST">
-            <h2>Login</h2>
-            <div class="mb-3">
-                <label class="form-label">Email:
-                    <input type="email" name="email" placeholder="Digite seu email"  class="form-control inputs required" name="email" required>
-                </label>
-            </div>
-            <div class="mb-3">
-                <label class="form-label">Senha:
-                    <input type="password" name="password" placeholder="Digite sua senha" class="form-control inputs required" name="password" required>
-                </label>
-            </div>
-            <button type="submit" class="btn btn-primary">Entrar</button>
-            <p>Não tem uma conta? <a href="register.html">Crie aqui!</a></p>
-        </form>
+    <div class="contentPerfilList">
+        <h2>Perfil do Usuário</h2>
+        <div id="userProfile"></div>
+        <div id="changeEmailForm" style="display: none;">
+            <form id="updateEmailForm" method="POST">
+                <div class="mb-3">
+                    <label class="form-label">Novo Email:
+                        <input type="email" class="form-control" name="email" required>
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-primary">Salvar Email</button>
+                <button type="button" id="cancelEmail" class="btn">Cancelar</button>
+            </form>
+        </div>
+        <div id="changePasswordForm" style="display: none;">
+            <form id="updatePasswordForm" method="POST">
+                <div class="mb-3">
+                    <label class="form-label">Nova Senha:
+                        <input type="password" class="form-control" name="password" required>
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-primary">Salvar Senha</button>
+                <button type="button" id="cancelPassword" class="btn">Cancelar</button>
+            </form>
+        </div>
     </div>
 
     <footer>
