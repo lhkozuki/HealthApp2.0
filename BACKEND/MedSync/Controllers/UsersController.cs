@@ -63,13 +63,18 @@ namespace MedSync.Backend.Controllers
 
         // POST: API/ Cadastra um usuário
         [HttpPost]
-        public ActionResult CreatUser(UserCreateDto userCreateDto)
+        public async Task<ActionResult<UserDto>> CreateUser([FromBody] UserCreateDto userDto)
         {
+             var existingUser = await _context.Users.FirstOrDefaultAsync(u => u.Email == userDto.Email);
+            if (existingUser != null)
+            {   
+                return BadRequest("Email já cadastrado.");
+            }
             var user = new User
             {
-                Name = userCreateDto.Name,
-                Email = userCreateDto.Email,
-                Password = userCreateDto.Password
+                Name = userDto.Name,
+                Email = userDto.Email,
+                Password = userDto.Password
             };
 
             _context.Users.Add(user);
@@ -112,6 +117,29 @@ namespace MedSync.Backend.Controllers
             _context.Users.Remove(user);
             _context.SaveChanges();
             return NoContent();
+        }
+
+        // POST: api/Users/login
+        [HttpPost("login")]
+        public async Task<ActionResult<UserDto>> Login([FromBody] LoginDto loginDto)
+        {
+            var user = await _context.Users
+                .FirstOrDefaultAsync(u => u.Email == loginDto.Email && u.Password == loginDto.Password);
+
+            if (user == null)
+            {
+                return Unauthorized("Email ou senha inválidos.");
+            }
+
+            var userDto = new UserDto
+            {
+                Id = user.Id,
+                Name = user.Name,
+                Email = user.Email,
+                MedicationIds = user.Medications?.Select(m => m.Id).ToList() ?? new List<int>()
+            };
+
+            return Ok(userDto);
         }
     }
 }
