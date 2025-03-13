@@ -14,7 +14,7 @@ O *HealthApp* é um sistema desenvolvido para ajudar usuários a lembrarem de to
 
 ## Tecnologias Utilizadas
 - *Backend:* C# (.NET 8)
-  > * **Swagger:** 
+  > * **Swagger:** https://github.com/user-attachments/files/19220999/API.MedSync.v1.0.json
   > 
   > * **Diagrama de classes:** 
 - *Frontend:* HTML, CSS, JavaScript
