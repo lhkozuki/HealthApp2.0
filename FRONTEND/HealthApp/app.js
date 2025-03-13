@@ -109,7 +109,7 @@ const showProtectedPageContent = () => {
 // Pré-verificação de autenticação para páginas protegidas
 (function () {
     const path = window.location.pathname;
-    if (path.includes('create.html') || path.includes('lembrete.html')) {
+    if (path.includes('create.html') || path.includes('lembrete.html') || path.includes('user.html')) {
         if (!isUserLoggedIn()) {
             window.location.href = 'login.html';
         } else {

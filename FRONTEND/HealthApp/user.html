@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <script defer src="app.js"></script>
 </head>
-<body>
+<body class="protected">
     <header class="header">
         <nav class="nav">
             <button class="btn-menu" aria-label="Abrir Menu" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
@@ -32,24 +32,30 @@
         <div id="userProfile"></div>
         <div id="changeEmailForm" style="display: none;">
             <form id="updateEmailForm" method="POST">
+                <h2>Alterar email</h2>
                 <div class="mb-3">
                     <label class="form-label">Novo Email:
-                        <input type="email" class="form-control" name="email" required>
+                        <input type="email" name="email" placeholder="Digite seu novo email" class="form-control inputs required" required>
                     </label>
                 </div>
-                <button type="submit" class="btn btn-primary">Salvar Email</button>
-                <button type="button" id="cancelEmail" class="btn">Cancelar</button>
+                <div class="mb-3">
+                    <button type="button" class="btn" id="cancelEmail">Cancelar</button>
+                    <button type="submit" class="btn">Salvar Email</button>
+                </div>
             </form>
         </div>
         <div id="changePasswordForm" style="display: none;">
             <form id="updatePasswordForm" method="POST">
+                <h2>Alterar senha</h2>
                 <div class="mb-3">
                     <label class="form-label">Nova Senha:
-                        <input type="password" class="form-control" name="password" required>
+                        <input type="password" name="password" placeholder="Digite sua nova senha"  class="form-control inputs required" required>
                     </label>
                 </div>
-                <button type="submit" class="btn btn-primary">Salvar Senha</button>
-                <button type="button" id="cancelPassword" class="btn">Cancelar</button>
+                <div class="mb-3">
+                    <button type="button" class="btn" id="cancelPassword" >Cancelar</button>
+                    <button type="submit" class="btn">Salvar Senha</button>
+                </div>
             </form>
         </div>
     </div>

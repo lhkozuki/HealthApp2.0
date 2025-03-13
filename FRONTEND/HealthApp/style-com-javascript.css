@@ -200,6 +200,21 @@ button[type="submit"]:hover{
   background-color: #181818;
 }
 
+button[type="submit"].btn, button[type="button"].btn{
+  font-size: 14px;
+  width: 120px;
+  height: 50px;
+  margin-top: 0;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--white);
+  color: var(--color-white);
+  cursor: pointer;
+  transition: .3s;
+}
+
+
 #createMedicationForm{
   display: flex;
   flex-direction: column;
@@ -241,7 +256,13 @@ button[type="submit"]:hover{
   gap: 2rem;
 }
 
-.content form{
+.content form, #updateEmailForm{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#updateEmailForm, #updatePasswordForm {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -329,6 +350,7 @@ h1 {
 
 h2 {
   text-align: center;
+  margin-bottom: 5px;
 }
 
 p {
@@ -337,7 +359,7 @@ p {
 
 
 #changePasswordLink, .contentPerfilList #userProfile #logoutLink{
-  margin: 10px;
+  margin: 5px;
   text-decoration: none; 
   color: var(--white);
 
