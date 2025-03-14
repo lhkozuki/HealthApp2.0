@@ -18,7 +18,7 @@ O *HealthApp* é um sistema desenvolvido para ajudar usuários a lembrarem de to
   > 
   > * **Diagrama de classes:** 
 - *Frontend:* HTML, CSS, JavaScript
-  > * **Telas no Figma:** 
+  > * **Telas no Figma:** https://www.figma.com/design/XEPELADEB7k8MpV41fBxBm/Health-App?node-id=10-4&t=y1B9pNFLKfjb56sW-1
 - *Banco de Dados:* SQL Server hospedado no Azure
   > * **Diagrama Relacional do Banco de Dados:** https://www.mermaidchart.com/raw/bdfa32c6-115e-4499-83aa-3eb1386b67b8?theme=light&version=v0.1&format=svg
   > 
