@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthApp</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="img\healthcare_icon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f0;
+            text-align: center;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: #fff;
+        }
+        .menu {
+            display: flex;
+            gap: 20px;
+        }
+        .menu a {
+            text-decoration: none;
+            color: black;
+            font-weight: 600;
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            padding: 40px;
+        }
+        .text-section {
+            max-width: 400px;
+            text-align: left;
+        }
+        .title {
+            font-size: 48px;
+            font-weight: 400;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #d4d4c9;
+            color: black;
+            text-decoration: none;
+            border-radius: 25px;
+            border: 1px solid black;
+            font-weight: 600;
+        }
+        .image-section {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        .image-section img:first-child {
+            width: 50%;
+            border-radius: 10px;
+        }
+        .image-stack {
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            gap: 30px;
+        }
+        .image-stack img {
+            width: 80%;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2 style="margin-left: 40px;">HealthApp</h2>
+        <nav class="menu">
+            <a href="#">HOME</a>
+            <a href="#">SOBRE</a>
+            <a href="#">SUPORTE</a>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="text-section">
+            <h1 class="title">HealthApp</h1>
+            <p>O HealthApp é um sistema desenvolvido para ajudar usuários a lembrarem de tomar seus medicamentos no horário correto.</p>
+            <p>A aplicação permite o cadastro de usuários, a associação de medicamentos com informações detalhadas e a geração automática de alarmes baseados na periodicidade e duração do tratamento.</p>
+            <a href="#" class="btn">LOGIN</a>
+            <br>
+            <a href="https://github.com/amanda-barbosa-dev/HealthApp2.0" class="btn">REPOSITÓRIO GITHUB</a>
+        </div>
+        <div class="image-section">
+            <img src="img/healthcare_family.webp" alt="healthcare_family">
+            <div class="image-stack">
+                <img src="img/capsules.jpg" alt="capsules">
+                <img src="img/healthcare_tech.webp" alt="healthcare_tech">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
